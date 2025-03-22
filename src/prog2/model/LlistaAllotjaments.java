@@ -1,14 +1,25 @@
 package prog2.model;
 
+import java.util.ArrayList;
+
 public class LlistaAllotjaments implements InLlistaAllotjaments {
+    private ArrayList<Allotjament> allotjaments;
+    public LlistaAllotjaments() {
+        allotjaments = new ArrayList<>();
+    }
+
     @Override
     public void afegirAllotjament(Allotjament allotjament) throws ExcepcioCamping {
-
+        if (allotjaments.contains(allotjament)) {
+            throw ExcepcioCamping ("Aquest allotjament ja existeix");
+        } else {
+            allotjaments.add(allotjament);
+        }
     }
 
     @Override
     public void buidar() {
-
+        allotjaments.clear();
     }
 
     @Override
