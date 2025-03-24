@@ -1,5 +1,7 @@
 
-package prog2.model;
+package prog2.model.acces;
+
+import prog2.model.allotjament.Allotjament;
 
 /**
  * Interfície que defineix les operacions bàsiques d'un accés.

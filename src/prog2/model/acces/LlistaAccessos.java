@@ -1,6 +1,6 @@
-package prog2.model;
+package prog2.model.acces;
 
-import java.io.Serializable;
+import prog2.vista.ExcepcioCamping;
 
 public class LlistaAccessos implements InLlistaAccessos {
     @Override

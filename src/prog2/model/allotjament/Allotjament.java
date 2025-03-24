@@ -1,4 +1,6 @@
-package prog2.model;
+package prog2.model.allotjament;
+
+import prog2.model.Incidencia;
 
 public class Allotjament implements InAllotjament{
     @Override

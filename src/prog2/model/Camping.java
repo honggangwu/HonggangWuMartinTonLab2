@@ -1,6 +1,14 @@
 package prog2.model;
+import prog2.vista.ExcepcioCamping;
 
 public class Camping implements InCamping{
+    public void afegirIncidencia(int numIncidencia, String tipus, String idAllotjament, String data) throws ExcepcioCamping{
+
+    }
+    public void eliminarIncidencia(int numIncidencia) throws ExcepcioCamping {
+
+    }
+
     @Override
     public String getNomCamping() {
         return "";
@@ -44,6 +52,11 @@ public class Camping implements InCamping{
     @Override
     public void save(String camiDesti) throws ExcepcioCamping {
 
+    }
+
+    @Override
+    public static Camping load(String camiOrigen ) throws  ExcepcioCamping {
+        return null;
     }
 
     @Override
