@@ -13,8 +13,11 @@ public class Incidencia{
     private String data;
     private TipusIncidencia tipus;
 
-    public Incidencia() {
-
+    public Incidencia(int numeroIncidencia, Allotjament allotjament, String data, TipusIncidencia tipus) {
+        this.numeroIncidencia = numeroIncidencia;
+        this.allotjament = allotjament;
+        this.data = data;
+        this.tipus = tipus;
     }
 
     public String getIluminacioAllotjament(){
