@@ -7,7 +7,7 @@ public abstract class Allotjament implements InAllotjament{
     private long estadaMinAlta;
     private long estadaMinBaixa;
     private boolean estat;
-    private String iluminacio;
+    private static String iluminacio;
 
     public Allotjament(String nom, String idAllotjament, long estadaMinAlta,
                        long estadaMinBaixa, boolean estat, String iluminacio) {
@@ -35,7 +35,7 @@ public abstract class Allotjament implements InAllotjament{
     @Override
     public void setId(String id) { this.idAllotjament = id; }
 
-    public String getIluminacio() { return iluminacio; }
+    public static String getIluminacio() { return iluminacio; }
     public void setIluminacio(String iluminacio) {this.iluminacio = iluminacio; }
     public void setEstat(boolean estat) {this.estat = estat; }
 

@@ -36,7 +36,6 @@ public class Incidencia {
     }
 
     public String getIluminacioAllotjament(){
-        iluminacio =;
-        return iluminacio
+        return Allotjament.getIluminacio();
     }
 }
