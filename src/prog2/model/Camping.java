@@ -2,9 +2,12 @@ package prog2.model;
 import prog2.vista.ExcepcioCamping;
 
 public class Camping implements InCamping{
+    @Override
     public void afegirIncidencia(int numIncidencia, String tipus, String idAllotjament, String data) throws ExcepcioCamping{
 
     }
+
+    @Override
     public void eliminarIncidencia(int numIncidencia) throws ExcepcioCamping {
 
     }
