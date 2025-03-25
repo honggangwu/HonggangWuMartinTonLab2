@@ -1,5 +1,6 @@
 package prog2.model;
 import prog2.model.allotjament.Allotjament;
+import prog2.model.allotjament.InAllotjament;
 
 public class Incidencia{
     public static enum TipusIncidencia {
@@ -18,6 +19,21 @@ public class Incidencia{
         this.allotjament = allotjament;
         this.data = data;
         this.tipus = tipus;
+    }
+
+    // GETTERS I SETTERS
+    public int getNumeroIncidencia() { return numeroIncidencia; }
+    public Allotjament getAllotjament() { return allotjament; }
+    public String getData() { return data; }
+    public TipusIncidencia getTipus() { return tipus; }
+    void setNumeroIncidencia(int numeroIncidencia) { this.numeroIncidencia = numeroIncidencia; }
+    void setAllotjament(Allotjament allotjament) { this.allotjament = allotjament; }
+    void setData(String data) { this.data = data; }
+    void setTipus(TipusIncidencia tipus) { this.tipus = tipus; }
+
+    public String toString() {
+        return "Numero:" + getNumeroIncidencia() + ", Allotjament:" + getAllotjament() +
+                " Data:" + getData() + ", Tipus:" + getTipus();
     }
 
     public String getIluminacioAllotjament(){
