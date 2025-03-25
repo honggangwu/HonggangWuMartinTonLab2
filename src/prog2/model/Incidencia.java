@@ -1,8 +1,7 @@
 package prog2.model;
 import prog2.model.allotjament.Allotjament;
-import prog2.model.allotjament.InAllotjament;
 
-public class Incidencia{
+public class Incidencia {
     public static enum TipusIncidencia {
         Reparacio,
         Neteja,
@@ -37,6 +36,7 @@ public class Incidencia{
     }
 
     public String getIluminacioAllotjament(){
-        return "";
+        iluminacio =;
+        return iluminacio
     }
 }

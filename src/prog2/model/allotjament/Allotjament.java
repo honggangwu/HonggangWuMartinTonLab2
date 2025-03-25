@@ -20,7 +20,7 @@ public abstract class Allotjament implements InAllotjament{
     }
 
     public boolean isOperatiu(){
-        return true;
+        return estat;
     }
 
     @Override
@@ -34,6 +34,11 @@ public abstract class Allotjament implements InAllotjament{
 
     @Override
     public void setId(String id) { this.idAllotjament = id; }
+
+    public String getIluminacio() { return iluminacio; }
+    public void setIluminacio(String iluminacio) {this.iluminacio = iluminacio; }
+    public void setEstat(boolean estat) {this.estat = estat; }
+
 
     @Override
     public long getEstadaMinima(Temp temp) {
@@ -53,9 +58,9 @@ public abstract class Allotjament implements InAllotjament{
     @Override
     public void tancarAllotjament(Incidencia in) {
         estat = false;
-        if (in.equals(Reparacio)){ iluminacio = "Nose%";}
-        if (in.equals(Neteja)){ iluminacio = "Nose%";}
-        if (in.equals(Tancament)){ iluminacio = "Nose%";}
+        if (in.equals(Reparacio)){ iluminacio = "100%";}
+        if (in.equals(Neteja)){ iluminacio = "50%";}
+        if (in.equals(Tancament)){ iluminacio = "0%";}
     }
 
     @Override
