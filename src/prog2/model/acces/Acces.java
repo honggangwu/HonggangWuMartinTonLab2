@@ -5,7 +5,7 @@ import prog2.model.allotjament.LlistaAllotjaments;
 
 public abstract class Acces implements InAcces {
     private String nom;
-    private boolean accessibilitat;
+    private boolean accessibilitat=true;
     private boolean estat;
     private LlistaAllotjaments llista;
 
@@ -21,7 +21,7 @@ public abstract class Acces implements InAcces {
 
     public void setNom(String nom){this.nom=nom;}
 
-    public boolean isAccessibilitat(){return this.accessibilitat;}
+    public boolean isAccessibilitat(){return false;}
 
     public void setAccessibilitat(boolean accessibilitat){this.accessibilitat=accessibilitat;}
 
@@ -48,4 +48,8 @@ public abstract class Acces implements InAcces {
 
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

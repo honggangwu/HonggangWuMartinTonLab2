@@ -6,12 +6,9 @@ public abstract class AccesAsfalt extends Acces{
     private int metresQuadrats;
 
     public AccesAsfalt(String nom, boolean accessibilitat,
-                       boolean estat, LlistaAllotjaments llista) {
-        super(nom, idAllotjament, 7, 4, mida, habitacions, placesPersones);
-        this.placesParquing = placesParquing;
-        this.terrassa = terrassa;
-        this.tv = tv;
-        this.aireFred = aireFred;
+                       boolean estat, LlistaAllotjaments llista, int metresQuadrats) {
+        super(nom, accessibilitat, estat, llista);
+        this.metresQuadrats = metresQuadrats;
     }
 
     public int getMetresQuadrats(){ return this.metresQuadrats;}
