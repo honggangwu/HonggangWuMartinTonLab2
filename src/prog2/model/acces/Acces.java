@@ -25,7 +25,7 @@ public abstract class Acces implements InAcces {
 
     public void setAccessibilitat(boolean accessibilitat){this.accessibilitat=accessibilitat;}
 
-    public boolean isEstat(){return this.estat;}
+    public boolean isOperatiu(){return this.estat;}
 
     public void setEstat(){this.estat=estat;}
 
@@ -35,7 +35,6 @@ public abstract class Acces implements InAcces {
 
     @Override
     public void afegirAllotjament(Allotjament allotjament) {
-
     }
 
     @Override
@@ -50,6 +49,9 @@ public abstract class Acces implements InAcces {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Nom=" + getNom() + ", accessibilitat=" + isAccessibilitat() +
+                ", estat: " + isOperatiu()+
+                ", llista " + getLlista();
     }
+
 }

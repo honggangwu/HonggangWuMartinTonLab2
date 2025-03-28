@@ -1,7 +1,7 @@
 package prog2.model.allotjament;
 import prog2.model.Incidencia;
 
-public abstract class Allotjament implements InAllotjament{
+public class Allotjament implements InAllotjament{
     private String nom;
     private String idAllotjament;
     private long estadaMinAlta;
@@ -58,9 +58,9 @@ public abstract class Allotjament implements InAllotjament{
     @Override
     public void tancarAllotjament(Incidencia in) {
         estat = false;
-        if (in.equals(Reparacio)){ iluminacio = "100%";}
-        if (in.equals(Neteja)){ iluminacio = "50%";}
-        if (in.equals(Tancament)){ iluminacio = "0%";}
+        if (in.getTipus().equals(Incidencia.TipusIncidencia.Reparacio)){ iluminacio = "100%";}
+        if (in.getTipus().equals(Incidencia.TipusIncidencia.Neteja)){ iluminacio = "50%";}
+        if (in.getTipus().equals(Incidencia.TipusIncidencia.Tancament)){ iluminacio = "0%";}
     }
 
     @Override

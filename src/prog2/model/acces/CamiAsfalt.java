@@ -9,5 +9,10 @@ public class CamiAsfalt extends AccesAsfalt{
 
     @Override
     public boolean isAccessibilitat() {return false;}
+
+    @Override
+    public String toString() {
+        return super.toString() + ", metres quadrats: "+ getMetresQuadrats();
+    }
 }
 

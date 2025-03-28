@@ -16,4 +16,9 @@ public class CarreteraTerra extends AccesTerra{
 
     @Override
     public boolean isAccessibilitat() {return true;}
+
+    @Override
+    public String toString() {
+        return super.toString()+", longitud:"+getLongitud()+", amplada: "+getAmplada();
+    }
 }

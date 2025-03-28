@@ -16,4 +16,9 @@ public class CarreteraAsfalt extends AccesAsfalt{
 
     @Override
     public boolean isAccessibilitat() {return true;}
+
+    @Override
+    public String toString() {
+        return super.toString()+ ", metres quadrats: "+ getMetresQuadrats()+ ", pes:" + getPes();
+    }
 }

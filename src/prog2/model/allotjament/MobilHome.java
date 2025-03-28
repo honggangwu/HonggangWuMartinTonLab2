@@ -22,4 +22,9 @@ public class MobilHome extends Casa{
                 ", places persones=" + getPlacesPersones() +
                 ", barbacoa=" + isBarbacoa() + " }";
     }
+
+    @Override
+    public boolean isOperatiu() {
+        return super.isOperatiu();
+    }
 }

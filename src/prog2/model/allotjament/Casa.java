@@ -24,4 +24,9 @@ public abstract class Casa extends Allotjament {
     public void setHabitacions(int habitacions){ this.habitacions = habitacions; }
 
     public void setPlacesPersones(int placesPersones){ this.placesPersones = placesPersones; }
+
+    @Override
+    public boolean isOperatiu() {
+        return super.isOperatiu();
+    }
 }

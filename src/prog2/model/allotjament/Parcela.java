@@ -26,4 +26,9 @@ public class Parcela extends Allotjament {
                 " Parcela { mida=" + getMida() +
                 ", connexio electrica=" + isConnexioElectrica() + " }";
     }
+
+    @Override
+    public boolean isOperatiu() {
+        return super.isOperatiu();
+    }
 }

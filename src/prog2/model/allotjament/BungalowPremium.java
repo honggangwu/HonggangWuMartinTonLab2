@@ -27,4 +27,9 @@ public class BungalowPremium extends Bungalow {
                 ", serveis extra=" + isServeisExtra() +
                 ", codi wifi=" + getCodiWifi() + " }";
     }
+
+    @Override
+    public boolean isOperatiu() {
+        return super.isOperatiu();
+    }
 }

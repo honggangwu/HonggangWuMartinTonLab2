@@ -30,4 +30,9 @@ public class Glamping extends Casa{
                 ", material=" + getMaterial() +
                 ", casa mascotes=" + isCasaMascotes() + " }";
     }
+
+    @Override
+    public boolean isOperatiu() {
+        return super.isOperatiu();
+    }
 }
