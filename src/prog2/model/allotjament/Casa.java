@@ -6,7 +6,8 @@ public abstract class Casa extends Allotjament {
     private int placesPersones;
 
     public Casa(String nom, String idAllotjament, long estadaMinAlta,
-                long estadaMinBaixa, String mida, int habitacions, int placesPersones) {
+                long estadaMinBaixa, String mida,boolean estat,String iluminacio,
+                int habitacions, int placesPersones) {
         super(nom, idAllotjament, estadaMinAlta, estadaMinBaixa, estat, iluminacio);
         this.mida = mida;
         this.habitacions = habitacions;

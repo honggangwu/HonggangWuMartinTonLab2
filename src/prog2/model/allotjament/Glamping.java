@@ -31,8 +31,5 @@ public class Glamping extends Casa{
                 ", casa mascotes=" + isCasaMascotes() + " }";
     }
 
-    @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
+
 }

@@ -27,8 +27,4 @@ public class Parcela extends Allotjament {
                 ", connexio electrica=" + isConnexioElectrica() + " }";
     }
 
-    @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
 }

@@ -28,8 +28,4 @@ public class BungalowPremium extends Bungalow {
                 ", codi wifi=" + getCodiWifi() + " }";
     }
 
-    @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
 }

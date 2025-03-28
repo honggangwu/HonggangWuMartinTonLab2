@@ -45,8 +45,4 @@ public class Bungalow extends Casa {
                 ", aire fred=" + isAireFred() + " }";
     }
 
-    @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
 }

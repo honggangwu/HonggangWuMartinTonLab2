@@ -23,8 +23,4 @@ public class MobilHome extends Casa{
                 ", barbacoa=" + isBarbacoa() + " }";
     }
 
-    @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
 }
