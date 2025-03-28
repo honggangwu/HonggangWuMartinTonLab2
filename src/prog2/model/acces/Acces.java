@@ -5,7 +5,7 @@ import prog2.model.allotjament.LlistaAllotjaments;
 
 public abstract class Acces implements InAcces {
     private String nom;
-    private boolean accessibilitat=true;
+    private boolean accessibilitat;
     private boolean estat;
     private LlistaAllotjaments llista;
 
@@ -27,7 +27,7 @@ public abstract class Acces implements InAcces {
 
     public boolean isOperatiu(){return this.estat;}
 
-    public void setEstat(){this.estat=estat;}
+    public void setEstat(boolean estat){this.estat=estat;}
 
     public LlistaAllotjaments getLlista(){return this.llista;}
 
@@ -35,16 +35,17 @@ public abstract class Acces implements InAcces {
 
     @Override
     public void afegirAllotjament(Allotjament allotjament) {
+        this.llista.afegirAllotjament(allotjament);
     }
 
     @Override
     public void tancarAcces() {
-
+        estat=false;
     }
 
     @Override
     public void obrirAcces() {
-
+        estat=true;
     }
 
     @Override

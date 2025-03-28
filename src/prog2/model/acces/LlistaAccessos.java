@@ -1,9 +1,11 @@
 package prog2.model.acces;
 
 import prog2.model.allotjament.Allotjament;
+import prog2.model.allotjament.LlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class LlistaAccessos implements InLlistaAccessos {
     private ArrayList<Acces> llistaAcces;
@@ -48,15 +50,43 @@ public class LlistaAccessos implements InLlistaAccessos {
     @Override
     public void actualitzaEstatAccessos() throws ExcepcioCamping {
 
+        for (Acces acces:llistaAcces){
+            acces.tancarAcces();
+
+            LlistaAllotjaments llistaAllotjaments=acces.getLlista();
+            if(llistaAllotjaments.containsAllotjamentOperatiu()){
+                acces.obrirAcces();
+            }
+        }
     }
 
     @Override
     public int calculaAccessosAccessibles() throws ExcepcioCamping {
-        return 0;
+        int accessosAccessibles=0;
+
+        for (Acces acces:llistaAcces){
+            if(acces.isAccessibilitat()){
+                accessosAccessibles++;
+            }
+        }
+        return accessosAccessibles;
     }
 
     @Override
     public float calculaMetresQuadratsAsfalt() throws ExcepcioCamping {
-        return 0;
+        int metresTotals = 0;
+        boolean trobat =false;
+
+       for(Acces acces: llistaAcces) {
+            if (acces instanceof AccesAsfalt) {
+                metresTotals += ((AccesAsfalt)acces).getMetresQuadrats();
+                trobat=true;
+            }
+       }
+       if (!trobat){
+           throw new ExcepcioCamping("No s'ha trobat ningun acces amb asfalt");
+       }
+
+        return metresTotals;
     }
 }
