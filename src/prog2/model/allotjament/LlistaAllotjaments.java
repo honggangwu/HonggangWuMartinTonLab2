@@ -47,6 +47,11 @@ public class LlistaAllotjaments implements InLlistaAllotjaments {
 
     @Override
     public boolean contains(Allotjament allotjament) {
+        for (Allotjament i : allotjaments) {
+            if (i.getId().equals(allotjament.getId())) {
+                return true;
+            }
+        }
         return false;
     }
 

@@ -1,5 +1,4 @@
 package prog2.model.acces;
-
 import prog2.model.allotjament.Allotjament;
 import prog2.model.allotjament.LlistaAllotjaments;
 
@@ -17,20 +16,14 @@ public abstract class Acces implements InAcces {
         this.llista = llista;
     }
 
+    // GETTERS I SETTERS
     public String getNom(){ return this.nom;}
-
     public void setNom(String nom){this.nom=nom;}
-
     public boolean isAccessibilitat(){return false;}
-
     public void setAccessibilitat(boolean accessibilitat){this.accessibilitat=accessibilitat;}
-
     public boolean isOperatiu(){return this.estat;}
-
     public void setEstat(boolean estat){this.estat=estat;}
-
     public LlistaAllotjaments getLlista(){return this.llista;}
-
     public void setLlista(LlistaAllotjaments llista){this.llista=llista;}
 
     @Override
@@ -40,12 +33,12 @@ public abstract class Acces implements InAcces {
 
     @Override
     public void tancarAcces() {
-        estat=false;
+        estat = false;
     }
 
     @Override
     public void obrirAcces() {
-        estat=true;
+        estat = true;
     }
 
     @Override
@@ -54,5 +47,4 @@ public abstract class Acces implements InAcces {
                 ", estat: " + isOperatiu()+
                 ", llista " + getLlista();
     }
-
 }

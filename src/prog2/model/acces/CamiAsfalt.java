@@ -1,5 +1,4 @@
 package prog2.model.acces;
-
 import prog2.model.allotjament.LlistaAllotjaments;
 
 public class CamiAsfalt extends AccesAsfalt{
@@ -15,4 +14,3 @@ public class CamiAsfalt extends AccesAsfalt{
         return super.toString() + ", metres quadrats: "+ getMetresQuadrats();
     }
 }
-
