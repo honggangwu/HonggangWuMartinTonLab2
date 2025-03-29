@@ -1,8 +1,6 @@
-package prog2.model.acces;
+package prog2.model;
 
-import prog2.model.allotjament.LlistaAllotjaments;
-
-public class CarreteraTerra extends AccesTerra{
+public class CarreteraTerra extends AccesTerra {
     private int amplada;
     public CarreteraTerra(String nom, boolean accessibilitat,boolean estat,
                           LlistaAllotjaments llista, int longitud, int amplada) {

@@ -1,6 +1,6 @@
-package prog2.model.allotjament;
+package prog2.model;
 
-public class MobilHome extends Casa{
+public class MobilHome extends Casa {
     private boolean barbacoa;
 
     public MobilHome(String nom, String idAllotjament, boolean estat, String iluminacio,

@@ -1,8 +1,6 @@
-package prog2.model.acces;
+package prog2.model;
 
-import prog2.model.allotjament.LlistaAllotjaments;
-
-public class CarreteraAsfalt extends AccesAsfalt{
+public class CarreteraAsfalt extends AccesAsfalt {
     private int pes;
     public CarreteraAsfalt(String nom,boolean accessibilitat, boolean estat, LlistaAllotjaments llista,
                       int metresQuadrats, int pes) {

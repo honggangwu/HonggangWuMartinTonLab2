@@ -1,4 +1,4 @@
-package prog2.model.allotjament;
+package prog2.model;
 import prog2.vista.ExcepcioCamping;
 import java.util.ArrayList;
 

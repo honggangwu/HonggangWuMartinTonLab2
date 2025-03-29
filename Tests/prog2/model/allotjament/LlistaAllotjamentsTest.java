@@ -2,8 +2,8 @@ package prog2.model.allotjament;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import prog2.model.Allotjament;
+import prog2.model.LlistaAllotjaments;
 
 class LlistaAllotjamentsTest {
 

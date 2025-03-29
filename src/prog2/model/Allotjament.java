@@ -1,7 +1,6 @@
-package prog2.model.allotjament;
-import prog2.model.Incidencia;
+package prog2.model;
 
-public class Allotjament implements InAllotjament{
+public class Allotjament implements InAllotjament {
     private String nom;
     private String idAllotjament;
     private long estadaMinAlta;

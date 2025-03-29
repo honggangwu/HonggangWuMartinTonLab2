@@ -1,5 +1,4 @@
 package prog2.model;
-import prog2.model.allotjament.Allotjament;
 
 public class Incidencia {
     public static enum TipusIncidencia {

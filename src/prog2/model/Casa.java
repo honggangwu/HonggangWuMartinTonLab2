@@ -1,4 +1,4 @@
-package prog2.model.allotjament;
+package prog2.model;
 
 public abstract class Casa extends Allotjament {
     private String mida;

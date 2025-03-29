@@ -1,4 +1,4 @@
-package prog2.model.allotjament;
+package prog2.model;
 
 public class Bungalow extends Casa {
     private int placesParquing;

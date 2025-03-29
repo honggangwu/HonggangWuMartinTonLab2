@@ -1,4 +1,4 @@
-package prog2.model.allotjament;
+package prog2.model;
 
 public class Parcela extends Allotjament {
     float mida;

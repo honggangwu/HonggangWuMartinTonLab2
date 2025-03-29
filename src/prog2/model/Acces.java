@@ -1,6 +1,4 @@
-package prog2.model.acces;
-import prog2.model.allotjament.Allotjament;
-import prog2.model.allotjament.LlistaAllotjaments;
+package prog2.model;
 
 public abstract class Acces implements InAcces {
     private String nom;

@@ -1,7 +1,6 @@
-package prog2.model.acces;
-import prog2.model.allotjament.LlistaAllotjaments;
+package prog2.model;
 
-public class CamiAsfalt extends AccesAsfalt{
+public class CamiAsfalt extends AccesAsfalt {
     public CamiAsfalt(String nom, boolean  accessibilitat, boolean estat, LlistaAllotjaments llista, int metresQuadrats) {
         super(nom, accessibilitat, estat, llista,metresQuadrats);
     }

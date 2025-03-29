@@ -1,9 +1,7 @@
 package prog2.model.acces;
 
 import org.junit.jupiter.api.Test;
-import prog2.model.allotjament.Allotjament;
-
-import static org.junit.jupiter.api.Assertions.*;
+import prog2.model.Allotjament;
 
 class AccesTest {
 

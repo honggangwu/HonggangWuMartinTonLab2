@@ -1,5 +1,4 @@
-package prog2.model.acces;
-import prog2.model.allotjament.LlistaAllotjaments;
+package prog2.model;
 import prog2.vista.ExcepcioCamping;
 import java.util.ArrayList;
 

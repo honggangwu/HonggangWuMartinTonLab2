@@ -1,8 +1,6 @@
-package prog2.model.acces;
+package prog2.model;
 
-import prog2.model.allotjament.LlistaAllotjaments;
-
-public abstract class AccesTerra extends Acces{
+public abstract class AccesTerra extends Acces {
     private int longitud;
 
     public AccesTerra(String nom, boolean accessibilitat,

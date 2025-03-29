@@ -1,4 +1,4 @@
-package prog2.model.allotjament;
+package prog2.model;
 
 public class BungalowPremium extends Bungalow {
     private boolean serveisExtra = true;
