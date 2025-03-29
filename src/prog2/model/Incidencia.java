@@ -30,12 +30,19 @@ public class Incidencia {
     void setData(String data) { this.data = data; }
     void setTipus(TipusIncidencia tipus) { this.tipus = tipus; }
 
+    public String getIluminacioAllotjament(){
+        return switch (tipus){
+            case Reparacio -> "100%";
+            case Neteja -> "50%";
+            case Tancament -> "0%";
+        };
+    }
+
+
+
     public String toString() {
         return "Numero:" + getNumeroIncidencia() + ", Allotjament:" + getAllotjament() +
                 " Data:" + getData() + ", Tipus:" + getTipus();
     }
 
-    public String getIluminacioAllotjament(){
-        return Allotjament.getIluminacio();
-    }
 }
