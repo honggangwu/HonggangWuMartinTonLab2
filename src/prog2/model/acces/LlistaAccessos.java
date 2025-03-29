@@ -9,6 +9,7 @@ public class LlistaAccessos implements InLlistaAccessos {
     public LlistaAccessos() {
         llistaAcces = new ArrayList<>();
     }
+
     @Override
     public void afegirAcces(Acces acc) throws ExcepcioCamping {
         if (llistaAcces.contains(acc)) {

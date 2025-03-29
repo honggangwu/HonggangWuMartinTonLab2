@@ -5,9 +5,7 @@ import java.util.ArrayList;
 public class LlistaAllotjaments implements InLlistaAllotjaments {
     private ArrayList<Allotjament> allotjaments;
 
-    public LlistaAllotjaments() {
-        allotjaments = new ArrayList<>();
-    }
+    public LlistaAllotjaments() { allotjaments = new ArrayList<>(); }
 
     @Override
     public void afegirAllotjament(Allotjament allotjament) throws ExcepcioCamping {

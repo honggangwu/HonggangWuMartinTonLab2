@@ -13,11 +13,11 @@ public class Incidencia {
     private String data;
     private TipusIncidencia tipus;
 
-    public Incidencia(int numeroIncidencia, Allotjament allotjament, String data, TipusIncidencia tipus) {
+    public Incidencia(int numeroIncidencia, Allotjament allotjament, String data, String tipus) {
         this.numeroIncidencia = numeroIncidencia;
         this.allotjament = allotjament;
         this.data = data;
-        this.tipus = tipus;
+        this.tipus = TipusIncidencia.valueOf(tipus);
     }
 
     // GETTERS I SETTERS
@@ -38,11 +38,8 @@ public class Incidencia {
         };
     }
 
-
-
     public String toString() {
         return "Numero:" + getNumeroIncidencia() + ", Allotjament:" + getAllotjament() +
                 " Data:" + getData() + ", Tipus:" + getTipus();
     }
-
 }
