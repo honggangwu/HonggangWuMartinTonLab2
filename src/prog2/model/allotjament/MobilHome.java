@@ -3,10 +3,10 @@ package prog2.model.allotjament;
 public class MobilHome extends Casa{
     private boolean barbacoa;
 
-    public MobilHome(String nom, String idAllotjament,
-                     String mida, int habitacions, int placesPersones,boolean barbacoa) {
-        super(nom ,idAllotjament ,5,3,mida,habitacions,placesPersones);
-        this.barbacoa=barbacoa;
+    public MobilHome(String nom, String idAllotjament, boolean estat, String iluminacio,
+                    String mida, int habitacions, int placesPersones, boolean barbacoa) {
+        super(nom ,idAllotjament,5,3, estat, iluminacio, mida, habitacions, placesPersones);
+        this.barbacoa = barbacoa;
     }
 
     public boolean isBarbacoa(){ return this.barbacoa; }
@@ -22,5 +22,4 @@ public class MobilHome extends Casa{
                 ", places persones=" + getPlacesPersones() +
                 ", barbacoa=" + isBarbacoa() + " }";
     }
-
 }

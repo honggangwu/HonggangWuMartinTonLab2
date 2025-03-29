@@ -5,9 +5,8 @@ public abstract class Casa extends Allotjament {
     private int habitacions;
     private int placesPersones;
 
-    public Casa(String nom, String idAllotjament, long estadaMinAlta,
-                long estadaMinBaixa, String mida,boolean estat,String iluminacio,
-                int habitacions, int placesPersones) {
+    public Casa(String nom, String idAllotjament, long estadaMinAlta, long estadaMinBaixa,
+                boolean estat, String iluminacio, String mida, int habitacions, int placesPersones) {
         super(nom, idAllotjament, estadaMinAlta, estadaMinBaixa, estat, iluminacio);
         this.mida = mida;
         this.habitacions = habitacions;
@@ -27,7 +26,5 @@ public abstract class Casa extends Allotjament {
     public void setPlacesPersones(int placesPersones){ this.placesPersones = placesPersones; }
 
     @Override
-    public boolean isOperatiu() {
-        return super.isOperatiu();
-    }
+    public boolean isOperatiu() { return super.isOperatiu(); }
 }
