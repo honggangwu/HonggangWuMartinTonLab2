@@ -136,7 +136,7 @@ public class Camping implements InCamping, Serializable {
 
         asfalt = 800;
         float pesMaxim = 10000;
-        Acces Acc2 = new CarreteraAsfalt("A2", true, asfalt, pesMaxim);
+        Acces Acc2 = new CarreteraAsfalt("A2", true,true, asfalt, pesMaxim);
         llistaAccessos.afegirAcces(Acc2);
 
         float longitud = 100;

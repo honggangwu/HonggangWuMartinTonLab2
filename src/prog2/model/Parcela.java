@@ -1,8 +1,8 @@
 package prog2.model;
 
 public class Parcela extends Allotjament {
-    float mida;
-    boolean connexioElectrica;
+    private float mida;
+    private boolean connexioElectrica;
 
     public Parcela(String nom, String idAllotjament, float mida,
                    boolean connexioElectrica, boolean estat, String iluminacio) {
