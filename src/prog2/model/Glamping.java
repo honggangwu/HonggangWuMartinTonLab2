@@ -5,7 +5,7 @@ public class Glamping extends Casa {
     private boolean casaMascotes;
 
     public Glamping(String nom, String idAllotjament, boolean estat, String iluminacio,
-                    String mida, int habitacions, int placesPersones,
+                    float mida, int habitacions, int placesPersones,
                     String material, boolean casaMascotes) {
         super(nom ,idAllotjament,5,3, estat, iluminacio, mida, habitacions, placesPersones);
         this.material = material;

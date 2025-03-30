@@ -1,8 +1,8 @@
 package prog2.model;
 
 public class CamiAsfalt extends AccesAsfalt {
-    public CamiAsfalt(String nom, boolean  accessibilitat, boolean estat, LlistaAllotjaments llista, float asfalt) {
-        super(nom, accessibilitat, estat, llista,asfalt);
+    public CamiAsfalt(String nom, boolean estat, float asfalt) {
+        super(nom, estat,asfalt);
     }
 
     @Override

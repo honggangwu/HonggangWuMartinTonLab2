@@ -6,12 +6,11 @@ public abstract class  Acces implements InAcces {
     private boolean estat;
     private LlistaAllotjaments llista;
 
-    public Acces(String nom, boolean accessibilitat,
-                    boolean estat, LlistaAllotjaments llista) {
+    public Acces(String nom,boolean estat) {
         this.nom = nom;
-        this.accessibilitat = accessibilitat;
         this.estat = estat;
-        this.llista = llista;
+        this.llista = new LlistaAllotjaments();
+        this.accessibilitat=false;
     }
 
     // GETTERS I SETTERS

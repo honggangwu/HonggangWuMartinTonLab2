@@ -131,12 +131,12 @@ public class Camping implements InCamping, Serializable {
         llistaAccessos.buidar();
 
         float asfalt = 200;
-        Acces Acc1 = new CamiAsfalt("A1", true, asfalt);
+        Acces Acc1 = new CamiAsfalt("A1", true,asfalt);
         llistaAccessos.afegirAcces(Acc1);
 
         asfalt = 800;
         float pesMaxim = 10000;
-        Acces Acc2 = new CarreteraAsfalt("A2", true,true, asfalt, pesMaxim);
+        Acces Acc2 = new CarreteraAsfalt("A2", true, asfalt, pesMaxim);
         llistaAccessos.afegirAcces(Acc2);
 
         float longitud = 100;
@@ -197,13 +197,13 @@ public class Camping implements InCamping, Serializable {
         float mida = 64.0f;
         boolean connexioElectrica = true;
 
-        Parcela ALL1 = new Parcela(nom, idAllotjament, true, "100%", mida, connexioElectrica);
+        Parcela ALL1 = new Parcela(nom, idAllotjament, mida, connexioElectrica,true , "100%");
         llistaAllotjaments.afegirAllotjament(ALL1);
 
         nom = "Parcel·la Sud";
         idAllotjament = "ALL2";
 
-        Parcela ALL2 = new Parcela(nom, idAllotjament, true, "100%", mida, connexioElectrica);
+        Parcela ALL2 = new Parcela(nom, idAllotjament, mida, connexioElectrica,true , "100%");
         llistaAllotjaments.afegirAllotjament(ALL2);
 
         // Afegir bungalows:

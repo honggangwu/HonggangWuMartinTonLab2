@@ -2,9 +2,9 @@ package prog2.model;
 
 public class CarreteraAsfalt extends AccesAsfalt {
     private float pesMaxim;
-    public CarreteraAsfalt(String nom,boolean accessibilitat, boolean estat, LlistaAllotjaments llista,
+    public CarreteraAsfalt(String nom, boolean estat,
                       float asfalt, float pesMaxim) {
-        super(nom, accessibilitat, estat, llista,asfalt);
+        super(nom,estat,asfalt);
         this.pesMaxim=pesMaxim;
     }
 

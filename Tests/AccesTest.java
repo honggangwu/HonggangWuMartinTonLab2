@@ -13,8 +13,7 @@ class AccesTest {
         allotjament = new Allotjament("Allotjament Prova","1234",
                 3,2,true,"100%");
         llistaAllotjaments =new LlistaAllotjaments();
-        acces=new CarreteraAsfalt("Acc6",true,true,llistaAllotjaments,
-                13,200);
+        acces=new CarreteraAsfalt("Acc6",true, 13,200);
     }
     @Test
     void afegirAllotjamenttest() {

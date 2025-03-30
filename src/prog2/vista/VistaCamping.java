@@ -25,7 +25,7 @@ public class VistaCamping {
     }
 
     public VistaCamping(String nomCamping) {
-        this.camping = new Camping();
+        this.camping = new Camping(nomCamping);
         this.camping.inicialitzaDadesCamping();
     }
 
@@ -176,7 +176,8 @@ public class VistaCamping {
     }
 
     // Este es el método principal de control del menú
-    public void iniciarMenu(Scanner sc) {
+    public void gestioCamping() {
+        Scanner sc=new Scanner();
         Menu<OpcionsMenuPrincipal> menu = new Menu<>("Menú Principal", OpcionsMenuPrincipal.values());
         menu.setDescripcions(descMenuPrincipal);
 

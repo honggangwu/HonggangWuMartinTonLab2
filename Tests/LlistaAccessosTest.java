@@ -13,7 +13,7 @@ class LlistaAccessosTest {
     void setUp() {
         llistaAllotjaments = new LlistaAllotjaments();
         llistaAccessos = new LlistaAccessos();
-        acces = new CarreteraAsfalt("Acc6", true, true, llistaAllotjaments, 13, 200);
+        acces = new CarreteraAsfalt("Acc6", true,13, 200);
         allotjamentOperatiu = new Allotjament("Allotjament1", "1234", 3, 2, true, "100%");
     }
 
@@ -74,9 +74,9 @@ class LlistaAccessosTest {
     void calculaAccessosAccessibles() {
         try {
             // Afegim diferents tipus d'accessos amb diferents valors d'accessibilitat
-            Acces acces1 = new CarreteraAsfalt("A1", true, true, llistaAllotjaments, 10, 100);
-            Acces acces2 = new CarreteraTerra("A2", false, true, llistaAllotjaments, 15, 50);
-            Acces acces3 = new CarreteraAsfalt("A3", true, false, llistaAllotjaments, 20, 150);
+            Acces acces1 = new CarreteraAsfalt("A1", true, 10, 100);
+            Acces acces2 = new CarreteraTerra("A2", false,15, 50);
+            Acces acces3 = new CarreteraAsfalt("A3", true, 20, 150);
 
             llistaAccessos.afegirAcces(acces1);
             llistaAccessos.afegirAcces(acces2);
@@ -96,11 +96,11 @@ class LlistaAccessosTest {
     void calculaMetresQuadratsAsfalt() {
         try {
             // Afegim accessos d'asfalt
-            AccesAsfalt acces1 = new CarreteraAsfalt("A1", true, true, llistaAllotjaments, 10, 100);
-            AccesAsfalt acces2 = new CarreteraAsfalt("A2", true, true, llistaAllotjaments, 15, 200);
+            AccesAsfalt acces1 = new CarreteraAsfalt("A1", true,10, 100);
+            AccesAsfalt acces2 = new CarreteraAsfalt("A2", true,15, 200);
 
             // Afegim un accés de terra que no hauria de comptar
-            Acces acces3 = new CarreteraTerra("A3", true, true, llistaAllotjaments, 20, 150);
+            Acces acces3 = new CarreteraTerra("A3", true,20, 150);
 
             llistaAccessos.afegirAcces(acces1);
             llistaAccessos.afegirAcces(acces2);
