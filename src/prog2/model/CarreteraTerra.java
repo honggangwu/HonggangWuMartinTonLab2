@@ -1,16 +1,16 @@
 package prog2.model;
 
 public class CarreteraTerra extends AccesTerra {
-    private int amplada;
+    private float amplada;
     public CarreteraTerra(String nom, boolean accessibilitat,boolean estat,
-                          LlistaAllotjaments llista, int longitud, int amplada) {
+                          LlistaAllotjaments llista, float longitud, float amplada) {
         super(nom, accessibilitat, estat, llista,longitud);
         this.amplada=amplada;
     }
 
-    public int getAmplada() {return this.amplada;}
+    public float getAmplada() {return this.amplada;}
 
-    public void setAmplada(int amplada){ this.amplada=amplada;}
+    public void setAmplada(float amplada){ this.amplada=amplada;}
 
     @Override
     public boolean isAccessibilitat() {return true;}

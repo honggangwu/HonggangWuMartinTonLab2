@@ -1,15 +1,15 @@
 package prog2.model;
 
 public abstract class AccesAsfalt extends Acces {
-    private int metresQuadrats;
+    private float asfalt;
 
     public AccesAsfalt(String nom, boolean accessibilitat,
-                       boolean estat, LlistaAllotjaments llista, int metresQuadrats) {
+                       boolean estat, LlistaAllotjaments llista, float asfalt) {
         super(nom, accessibilitat, estat, llista);
-        this.metresQuadrats = metresQuadrats;
+        this.asfalt = asfalt;
     }
 
-    public int getMetresQuadrats(){ return this.metresQuadrats;}
+    public float getMetresQuadrats(){ return this.asfalt;}
 
-    public void setMetresQuadrats(int metresQuadrats){this.metresQuadrats=metresQuadrats;}
+    public void setMetresQuadrats(float asfalt){this.asfalt=asfalt;}
 }

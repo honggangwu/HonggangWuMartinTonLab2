@@ -1,16 +1,16 @@
 package prog2.model;
 
 public class CarreteraAsfalt extends AccesAsfalt {
-    private int pes;
+    private float pesMaxim;
     public CarreteraAsfalt(String nom,boolean accessibilitat, boolean estat, LlistaAllotjaments llista,
-                      int metresQuadrats, int pes) {
-        super(nom, accessibilitat, estat, llista,metresQuadrats);
-        this.pes=pes;
+                      float asfalt, float pesMaxim) {
+        super(nom, accessibilitat, estat, llista,asfalt);
+        this.pesMaxim=pesMaxim;
     }
 
-    public int getPes(){return this.pes;}
+    public float getPes(){return this.pesMaxim;}
 
-    public void setPes(int pes){this.pes=pes;}
+    public void setPes(float pesMaxim){this.pesMaxim=pesMaxim;}
 
     @Override
     public boolean isAccessibilitat() {return true;}
