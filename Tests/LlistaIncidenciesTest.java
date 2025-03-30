@@ -15,7 +15,7 @@ class LlistaIncidenciesTest {
     void setUp() {
         llistaIncidencies = new LlistaIncidencies();
         allotjament = new Allotjament("Allotjament Test", "A001", 3, 2, true, "100%");
-        incidencia = new Incidencia(1, allotjament, "2025-03-29", "Reparacio");
+        incidencia = new Incidencia(1, allotjament, "2025-03-29", Incidencia.TipusIncidencia.Reparacio);
     }
 
     @Test
