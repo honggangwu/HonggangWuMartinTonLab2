@@ -12,12 +12,13 @@ public class Incidencia {
     private String data;
     private TipusIncidencia tipus;
 
-    public Incidencia(int numeroIncidencia, Allotjament allotjament, String data, String tipus) {
+    public Incidencia(int numeroIncidencia, Allotjament allotjament, String data, TipusIncidencia tipus) {
         this.numeroIncidencia = numeroIncidencia;
         this.allotjament = allotjament;
         this.data = data;
-        this.tipus = TipusIncidencia.valueOf(tipus);
+        this.tipus = tipus;
     }
+
 
     // GETTERS I SETTERS
     public int getNumeroIncidencia() { return numeroIncidencia; }
