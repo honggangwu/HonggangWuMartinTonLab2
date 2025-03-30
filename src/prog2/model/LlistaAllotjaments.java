@@ -23,15 +23,39 @@ public class LlistaAllotjaments implements InLlistaAllotjaments {
 
     @Override
     public String llistarAllotjaments(String estat) throws ExcepcioCamping {
-        boolean nouEstat = estat.equals("Operatiu");
-        String info ="";
+        StringBuilder info = new StringBuilder(); // Usamos StringBuilder para eficiencia
+
+        // Convertimos el String 'estat' a un boolean 'estatB'
+        boolean estatB = false;  // Por defecto, 'estatB' es 'false' (no operatiu)
+
+        if (estat.equals("Operatiu")) {
+            estatB = true;  // Si el estado es "Operatiu", lo marcamos como 'true'
+        } else if (estat.equals("No Operatiu")) {
+            estatB = false;  // Si el estado es "No Operatiu", lo dejamos como 'false'
+        } else if (!estat.equals("Tots")) {
+            // Si no es un estado válido, lanzamos una excepción
+            throw new ExcepcioCamping("El tipus d'estat indicat no és vàlid.");
+        }
+
+        // Recorremos la lista de alojamientos
         for (Allotjament allotjament : allotjaments) {
-            if (allotjament.isOperatiu() == nouEstat || estat.equals("Tots")) {
-                info = info + allotjament.toString();
+            // Si el estado es "Tots", mostramos todos los alojamientos
+            // Si el estado es "Operatiu" o "No Operatiu", mostramos según el estado del alojamiento
+            if (estat.equals("Tots") || allotjament.isOperatiu() == estatB) {
+                info.append(allotjament.toString()).append("\n");
             }
         }
-        return info;
+
+        // Si no hay alojamientos que cumplirían con el filtro, lanzamos una excepción
+        if (info.length() == 0) {
+            throw new ExcepcioCamping("No hi ha allotjaments amb aquest estat.");
+        }
+
+        return info.toString();
     }
+
+
+
 
     @Override
     public boolean containsAllotjamentOperatiu() {
