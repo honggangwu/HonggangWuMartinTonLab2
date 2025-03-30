@@ -12,28 +12,32 @@ public class LlistaIncidencies implements InLlistaIncidencies {
 
     @Override
     public void afegirIncidencia(int num, String tipus, Allotjament allotjament, String data) throws ExcepcioCamping {
-        // Verificar si el tipo de incidencia es válido
-        if (!tipus.equals("Tancament") && !tipus.equals("Reparacio") && !tipus.equals("Neteja")) {
+        // Convertir el tipus de String a TipusIncidencia
+        Incidencia.TipusIncidencia tipusIncidencia;
+        try {
+            tipusIncidencia = Incidencia.TipusIncidencia.valueOf(tipus);
+        } catch (IllegalArgumentException e) {
             throw new ExcepcioCamping("Aquesta incidència no existeix.");
         }
 
-        // Verificar si el allotjament ya tiene una incidencia
+        // Verificar si l’allotjament ja té una incidència
         for (Incidencia incidencia : incidencies) {
             if (incidencia.getAllotjament().equals(allotjament)) {
                 throw new ExcepcioCamping("Aquest allotjament ja té una incidència.");
             }
         }
 
-        // Crear y añadir la nueva incidencia
-        Incidencia novaIncidencia = new Incidencia(num, allotjament, data, tipus);
+        // Crear una nova incidència
+        Incidencia novaIncidencia = new Incidencia(num, allotjament, data, tipusIncidencia);
+
+        // Afegir la incidència a la llista
         incidencies.add(novaIncidencia);
 
-        // Cambiar el estado del allotjament y la iluminación
+        // Tancar l’allotjament
         allotjament.tancarAllotjament(novaIncidencia);
-
-        // Aquí se deberían gestionar los accesos, sin necesidad de nuevos atributos.
-        // Verificar si es necesario "tancar" o "obrir" accesos a los allotjaments relacionados.
     }
+
+
 
     @Override
     public void eliminarIncidencia(Incidencia in) throws ExcepcioCamping {
