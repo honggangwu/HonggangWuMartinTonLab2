@@ -17,7 +17,7 @@ public abstract class  Acces implements InAcces {
     // GETTERS I SETTERS
     public String getNom(){ return this.nom;}
     public void setNom(String nom){this.nom=nom;}
-    public boolean isAccessibilitat(){return false;}
+    public boolean isAccessibilitat(){return accessibilitat;}
     public void setAccessibilitat(boolean accessibilitat){this.accessibilitat=accessibilitat;}
     public boolean isOperatiu(){return this.estat;}
     public void setEstat(boolean estat){this.estat=estat;}
