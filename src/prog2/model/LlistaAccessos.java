@@ -75,4 +75,12 @@ public class LlistaAccessos implements InLlistaAccessos {
        }
         return metresTotals;
     }
+
+    public ArrayList<Acces> getLlistaAcces() {
+        return llistaAcces;
+    }
+
+    public void setLlistaAcces(ArrayList<Acces> llistaAcces) {
+        this.llistaAcces = llistaAcces;
+    }
 }

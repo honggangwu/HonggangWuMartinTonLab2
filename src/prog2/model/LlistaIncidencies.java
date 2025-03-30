@@ -1,47 +1,64 @@
 package prog2.model;
+
 import prog2.vista.ExcepcioCamping;
 import java.util.ArrayList;
 
-public class LlistaIncidencies implements InLlistaIncidencies{
+public class LlistaIncidencies implements InLlistaIncidencies {
     private ArrayList<Incidencia> incidencies;
 
-    public LlistaIncidencies() { incidencies = new ArrayList<>(); }
+    public LlistaIncidencies() {
+        incidencies = new ArrayList<>();
+    }
 
     @Override
     public void afegirIncidencia(int num, String tipus, Allotjament allotjament, String data) throws ExcepcioCamping {
-        Incidencia novaIncidencia = new Incidencia(num, allotjament, data, tipus);
-        if(tipus != "Tancament" || tipus != "Reparacio" || tipus != "Neteja"){
-            throw new ExcepcioCamping("Aquesta incidencia no existeix");
+        // Verificar si el tipo de incidencia es válido
+        if (!tipus.equals("Tancament") && !tipus.equals("Reparacio") && !tipus.equals("Neteja")) {
+            throw new ExcepcioCamping("Aquesta incidència no existeix.");
         }
 
+        // Verificar si el allotjament ya tiene una incidencia
         for (Incidencia incidencia : incidencies) {
             if (incidencia.getAllotjament().equals(allotjament)) {
-                throw new ExcepcioCamping("Aquest allotjament ja té una incidencia.");
+                throw new ExcepcioCamping("Aquest allotjament ja té una incidència.");
             }
         }
 
+        // Crear y añadir la nueva incidencia
+        Incidencia novaIncidencia = new Incidencia(num, allotjament, data, tipus);
         incidencies.add(novaIncidencia);
+
+        // Cambiar el estado del allotjament y la iluminación
+        allotjament.tancarAllotjament(novaIncidencia);
+
+        // Aquí se deberían gestionar los accesos, sin necesidad de nuevos atributos.
+        // Verificar si es necesario "tancar" o "obrir" accesos a los allotjaments relacionados.
     }
 
     @Override
     public void eliminarIncidencia(Incidencia in) throws ExcepcioCamping {
-        for (Incidencia incidencia : incidencies) {
-            if (incidencia.equals(in)) {
-                incidencies.remove(incidencia);
-            }
+        boolean eliminada = incidencies.removeIf(incidencia -> incidencia.equals(in));
+
+        if (!eliminada) {
+            throw new ExcepcioCamping("No s'ha trobat la incidència a eliminar.");
         }
+
+        // Restaurar el allotjament a operatiu
+        in.getAllotjament().obrirAllotjament();
+
+        // Aquí se podrían reactivar los accesos si es necesario.
     }
 
     @Override
-    public String llistarIncidencies() throws ExcepcioCamping {
-        String info ="";
-        for (Incidencia incidencia : incidencies) {
-            if (incidencia == null) {
-                throw new ExcepcioCamping("Incidencia no trobada");
-            }
-            info = info + incidencia.toString();
+    public String llistarIncidencies() {
+        if (incidencies.isEmpty()) {
+            return "No hi ha incidències registrades.";
         }
-        return info;
+        StringBuilder info = new StringBuilder();
+        for (Incidencia incidencia : incidencies) {
+            info.append(incidencia.toString()).append("\n");
+        }
+        return info.toString();
     }
 
     @Override
@@ -51,6 +68,14 @@ public class LlistaIncidencies implements InLlistaIncidencies{
                 return incidencia;
             }
         }
-        throw new ExcepcioCamping("Incidencia no existeix");
+        throw new ExcepcioCamping("La incidència amb número " + num + " no existeix.");
+    }
+
+    public ArrayList<Incidencia> getIncidencies() {
+        return new ArrayList<>(incidencies);
+    }
+
+    public void setIncidencies(ArrayList<Incidencia> incidencies) {
+        this.incidencies = new ArrayList<>(incidencies);
     }
 }

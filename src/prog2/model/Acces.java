@@ -1,6 +1,6 @@
 package prog2.model;
 
-public abstract class Acces implements InAcces {
+public abstract class  Acces implements InAcces {
     private String nom;
     private boolean accessibilitat;
     private boolean estat;

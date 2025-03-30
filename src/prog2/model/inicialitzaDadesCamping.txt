@@ -3,12 +3,12 @@
         llistaAccessos.buidar();
 
         float asfalt = 200;
-        Acces Acc1 = new CamiAsfaltat("A1", true, asfalt);
+        Acces Acc1 = new CamiAsfalt("A1", true, asfalt);
         llistaAccessos.afegirAcces(Acc1);
 
         asfalt = 800;
         float pesMaxim = 10000;
-        Acces Acc2 = new CarreteraAsfaltada("A2", true, asfalt, pesMaxim);
+        Acces Acc2 = new CarreteraAsfalt("A2", true, asfalt, pesMaxim);
         llistaAccessos.afegirAcces(Acc2);
 
         float longitud = 100;
